@@ -1,0 +1,25 @@
+{# Using for loop and if statements in the all_post, {{}} means to print.
+  Btw this is the syntax for comment in jinja(don't use html comment) #} 
+
+{% extends 'base.html' %} 
+
+{% block head %} 
+<title> Post </title>
+{% endblock %}
+
+{% block body %}
+<h1> All Posts </h1>
+
+    {% for post in posts %}   
+        <h3>{{ post.title }}</h3> 
+        
+        {% if post.author %}
+            <h4> By: {{post.author}} </h4>
+        {% else %}
+            <h4> By: N/A</h4>
+        {%endif%}    
+
+        <p>{{ post.content }}</p>
+    {%endfor%}
+
+{% endblock %}

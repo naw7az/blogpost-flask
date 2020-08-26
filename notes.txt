@@ -1,0 +1,30 @@
+1. Flask is like VS Code and Django is like Pycharm.
+
+2. Request methods
+   The two most common HTTP requests are GET and POST:
+   a) GET is used to request data from a specified resource.
+      GET requests are only used to request data
+      The query string in the URL of a GET request will have name/value pair.
+
+   b) POST is used to send data to a server to create/update a resource.
+      The data sent to the server with POST is stored in the request body of the HTTP request and 
+      not in the query string.
+
+3. Flask doesn't come with a database unlike django cause it's micro framework. So we need to install a 
+   third party database: pip install flask-sqlalchemy
+
+4. To create and edit a database file in terminal:
+   Step 1: Open terminal and go to the same directory where flask app is present
+   Step 2: type 'python', we have to do everything in terminal using python
+   Step 3: type 'from main(py file with flask app) import db(database object)', this will create
+           the database file
+   Step 4: type 'db.create_all()', this will go through our database model(BlogPost) and 
+           create all the required data(like title, content etc.) in database file.
+   Step 5: type 'from main import BlogPost', to import model in database file.
+   Step 6: type 'BlogPost(or any database model u made).query.all()', this will return a 
+           list with all data inside the model.
+   Step 7: type 'db.session.add(BlogPost(title='Tiitle', content='Connetent', author='Me'))'
+   Step 8: type 'BlogPost.query.all()[0].author', we will get 'Me' as the answer.
+
+5. CRUD - Create Read Update Delete
+         

@@ -1,0 +1,33 @@
+<!-- These are jinja syntax(called blocks) where the index.html file is 
+extending the data of base.html file. The extends keyword takes 
+all the format of base.html and then add on to it in next few lines. 
+It's called Inheriting templates. -->
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Home </title>
+
+{% endblock %}
+
+{% block body %}
+<br>
+<h1> Home Page </h1>
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>Welcome</h1>
+            <p>
+                Welcome to my Tech blog !!, Here I'll be talking about the latest and gratest in programming, machine
+                learning, data sceince and innovative tech So if you are intrestest in these topics Please have a look.
+            </p>
+            <p> Check out my <a href="https://naw7az.github.io/" target="_blank"> website </a> to see what I do
+                beyond the tech blogs </p>
+            <p>
+                <a class="btn btn-primary" href="/posts2" role="button">Read Blogs &raquo;</a>
+            </p>
+        </div>
+    </div>
+</main>
+{% endblock %}
